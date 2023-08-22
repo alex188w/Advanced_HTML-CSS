@@ -1,0 +1,163 @@
+@keyframes lampe-rising1 {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 1;
+    z-index: 1;
+  }
+  100% {
+    opacity: 0;
+    top: 14vh;
+    left: 30vw;
+    z-index: -2;
+  }
+}
+@keyframes lampe-rising2 {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 1;
+    z-index: 1;
+  }
+  100% {
+    opacity: 0;
+    top: 26vh;
+    left: 35vw;
+    z-index: -2;
+  }
+}
+@keyframes lampe-rising3 {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 1;
+    z-index: 1;
+  }
+  100% {
+    opacity: 0;
+    top: 5vh;
+    left: 26vw;
+    z-index: -2;
+  }
+}
+@keyframes lampe-rising4 {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 1;
+    z-index: 1;
+  }
+  100% {
+    opacity: 0;
+    top: 65vh;
+    left: 63vw;
+    z-index: -2;
+  }
+}
+@keyframes lampe-rising5 {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 1;
+    z-index: 1;
+  }
+  100% {
+    opacity: 0;
+    top: 78vh;
+    left: 71vw;
+    z-index: -2;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  counter-reset: count;
+  position: relative;
+}
+
+html {
+  counter-reset: count;
+}
+
+.backgraund {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: -1;
+}
+
+.lampe-check {
+  position: absolute;
+  visibility: hidden;
+  left: -999999px;
+}
+.lampe-check:checked {
+  counter-increment: count;
+}
+.lampe-check:checked ~ label {
+  display: none;
+}
+
+.counte-info {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  color: aliceblue;
+}
+.counte-info::before {
+  content: counter(count);
+}
+
+.lampe {
+  position: absolute;
+}
+.lampe__img {
+  width: 75px;
+}
+
+.lampe_1 {
+  animation: lampe-rising1 5s 0s both;
+}
+
+.lampe_2 {
+  animation: lampe-rising2 5s 3s both;
+}
+
+.lampe_3 {
+  animation: lampe-rising3 5s 6s both;
+}
+
+.lampe_4 {
+  animation: lampe-rising4 5s 9s both;
+}
+
+.lampe_5 {
+  animation: lampe-rising5 5s 12s both;
+}/*# sourceMappingURL=stile.css.map */
